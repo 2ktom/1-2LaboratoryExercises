@@ -1,53 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AwesomeMAUIApp.MainPage">
+             x:Class="MauiApp2.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
+        <HorizontalStackLayout 
+            Spacing="25" 
+            Padding="10,180" 
             VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-            <Entry
-                x:Name="EntryTest"
-                Placeholder="Type something here"
-                TextChanged="OnEntryTextChanged"
-                HorizontalOptions="Center"
-                />
-            <Label
-                x:Name="DisplayLbl"
-                HorizontalOptions="Center"
-                FontAttributes="Bold"
-                />
-
-        </VerticalStackLayout>
+            <VerticalStackLayout 
+                Spacing="5" 
+                HorizontalOptions="Center">
+                <Label
+                    x:Name="lbl1"
+                    Text="3rd Year Journey&#10;     Expectation"
+                    FontSize="20"
+                    HorizontalOptions="Center" />
+                <ImageButton x:Name="firstImage"
+                    Source="deansmile.jpg"
+                    HeightRequest="370"
+                    WidthRequest="170"
+                    HorizontalOptions="Center"
+                    Clicked="OnCounterClicked"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout 
+                Spacing="-10"
+                HorizontalOptions="Center">
+                <Label x:Name="lbl2"
+                    Text="Life Journey&#10;Expectation"
+                    FontSize="30"
+                    HorizontalOptions="Center" />
+                <ImageButton x:Name="secondImage"
+                    Source="straight.jpg"
+                    HeightRequest="320"
+                    WidthRequest="180"
+                    HorizontalOptions="Center"
+                    Clicked="onSecondImageClicked" />
+                <Image x:Name="buhol"
+                    Source="buhol.png"
+                    HeightRequest="320"
+                    WidthRequest="500"
+                    HorizontalOptions="Center"
+                    IsVisible="false"  />
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
     </ScrollView>
 
 </ContentPage>

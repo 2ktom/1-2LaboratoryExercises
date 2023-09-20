@@ -1,31 +1,27 @@
-﻿
-namespace AwesomeMAUIApp;
+﻿using Microsoft.Maui.Platform;
+using System.Runtime.CompilerServices;
+
+namespace MauiApp2;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	
 
 	public MainPage()
 	{
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+	private void OnCounterClicked(object sender, EventArgs e) {
+		
+			lbl1.Text = "3rd Year Journey\n         Reality";
+			firstImage.Source = "deanmad.jpg";
 	}
 
-	private void OnEntryTextChanged(object sender, TextChangedEventArgs e)
-	{
-		DisplayLbl.Text = EntryTest.Text;
-		SemanticScreenReader.Announce(DisplayLbl.Text);
+	private void onSecondImageClicked(object sender, EventArgs e) {
+			lbl2.Text = "Life Journey\n    Reality";
+			secondImage.Source = "buhol.png";
 	}
+	
 }
 
